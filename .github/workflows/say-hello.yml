@@ -1,0 +1,16 @@
+name: Say Hello
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  say-hello-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Run say-hello command
+        run: make say-hello
